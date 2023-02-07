@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Imc from './components/imc/imc';
 
 function App() {
+  const people = [
+    {
+      nom: 'Bernie',
+      poids: 80,
+      taille: 1.98
+    },
+    {
+      nom: 'Sanders',
+      poids: 65,
+      taille: 1.74
+    },
+    
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {people.map(person => (
+        <Imc _nom={person.nom} 
+        _poids={person.poids}
+        _taille={person.taille}/>
+      ))
+      }
     </div>
   );
 }
 
-export default App;
+export default App;d
