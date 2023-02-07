@@ -17,11 +17,11 @@ function App() {
   return (
     <div>
       {people.map(person => (
-        <Imc _nom={person.nom} 
-        _poids={person.poids}
-        _taille={person.taille}/>
+        <Imc _nom={person.nom} _poids={person.poids} _taille={person.taille}/>
       ))
       }
+      <Bouton _type='button' _onclick={Bonjour} _click='bonjour'/>
+      <Bouton _type='submit' _click='click'/>
     </div>
   );
 }
